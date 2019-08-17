@@ -1,7 +1,11 @@
 package main
 
-import "bcard/router"
+import (
+	"bcard/pkg/db"
+	"bcard/router"
+)
 
 func main() {
+	db.Setup()
 	router.InitRouter()
 }
